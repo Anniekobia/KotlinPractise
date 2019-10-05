@@ -1,23 +1,27 @@
+package random
+
 import java.util.*
 
 
 fun main(args: Array<String>) {
-    //dayOfWeek();
-//    var fortune: String
-//    for (i in 1..10) {
-//        fortune = getFortuneCookie()
-//        println("$fortune")
-//        if (fortune.contains("Lies you tell!")) break;
-//    }
-    canAddFish(10.0, listOf(3,3,3))
-    canAddFish(8.0, listOf(2,2,2), hasDecorations = false)
-    canAddFish(9.0, listOf(1,1,3), 3)
-    canAddFish(10.0, listOf(), 7, true)
+    dayOfWeek();
+    var fortune: String
+    var i: Int = 0
+    while (i <= 10) {
+        fortune = getFortuneCookie()
+        println("$fortune")
+        i++
+        if (fortune.contains("Lies you tell!")) break;
+    }
+//    canAddFish(10.0, listOf(3,3,3))
+//    canAddFish(8.0, listOf(2,2,2), hasDecorations = false)
+//    canAddFish(9.0, listOf(1,1,3), 3)
+//    canAddFish(10.0, listOf(), 7, true)
 }
 
 fun canAddFish(tankSize: Double, currentFish: List<Int>, fishSize: Int = 2, hasDecorations: Boolean = true): Boolean {
-    println((tankSize.times(if (hasDecorations) 0.8 else 1.0) >=fishSize+currentFish.sum()))
-    return (tankSize.times(if (hasDecorations) 0.8 else 1.0) >=fishSize+currentFish.sum())
+    println((tankSize.times(if (hasDecorations) 0.8 else 1.0) >= fishSize + currentFish.sum()))
+    return (tankSize.times(if (hasDecorations) 0.8 else 1.0) >= fishSize + currentFish.sum())
 }
 
 fun dayOfWeek() {
